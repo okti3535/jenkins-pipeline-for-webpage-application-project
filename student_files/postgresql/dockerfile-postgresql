@@ -1,0 +1,5 @@
+FROM postgres
+
+COPY ./postgresql/init.sql /docker-entrypoint-initdb.d/
+# postgres imajına bakarsak docker-enry.. dosyasına atarsan start ederim yazıyor o yüzden bu klasöre kopyalıyoruz
+EXPOSE 5432
